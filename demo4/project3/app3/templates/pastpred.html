@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 id="header">Past Predictions </h1>
+
+<br/><br/>
+<form action="" method=POST class="frm">
+    {% csrf_token %}
+    <table class="table table-striped table-hover table-bordered ">
+        <thead class="thead-light">
+        <tr>
+
+            <th scope="col">ID</th>
+            <th scope="col">Result</th>
+            <th scope="col">Probability</th>
+
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+       {% for k in queryset %}
+        <tr>
+             <td id="head9">
+                {{ k.id }}
+
+            </td>
+            <td id="head">
+                 {{ k.result }}
+                  <!--<h5>{{accuracy}}</h5> -->
+            </td>
+            <td id="head1">
+
+                {{ k.accuracy }}%
+                 <!-- <h5>{{name1}}%</h5> -->
+            </td>
+
+
+
+        </tr>
+         {% endfor %}
+        </tbody>
+    </table>
+
+</form>
+<br/>
+{% endblock %}
+
