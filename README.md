@@ -1,1 +1,1 @@
-# DETEC19---Main-Project
+This is a Covid 19 detection system using CT scan images in which a user can upload his/her ct scan image of lungs. Our system scans the CT scan image and predicts whether the person is infected with Covid 19 or not. Tools And Technologies Used - Python Coding Language, Pycharm IDE, Django Framework, Sqlite3 Database
